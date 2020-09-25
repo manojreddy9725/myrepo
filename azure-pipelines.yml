@@ -1,4 +1,14 @@
 # Python to Linux Web App on Azure
+- task: AzureFunctionApp@1
+  inputs:
+    azureSubscription: 'Free Trial(f7b00c4c-160e-4dbc-ab48-17c46657c3a3)'
+    appType: 'functionAppLinux'
+    appName: 'textfunctrigger'
+    deployToSlotOrASE: true
+    resourceGroupName: 'textfunctrigger'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'DOCKER|microsoft/azure-functions-dotnet-core2.0:2.0'
 # Build your Python project and deploy it to Azure as a Linux Web App.
 # Change python version to one thats appropriate for your application.
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
