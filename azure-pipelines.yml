@@ -1,11 +1,11 @@
 # Python to Linux Web App on Azure
 - task: AzureFunctionApp@1
   inputs:
-    azureSubscription: 'Free Trial(f7b00c4c-160e-4dbc-ab48-17c46657c3a3)'
+    azureSubscription: 'Free Trial(0ff4a4c3-bed3-4a6b-b59c-d56eb027e61f)'
     appType: 'functionAppLinux'
-    appName: 'textfunctrigger'
+    appName: 'Fun-python'
     deployToSlotOrASE: true
-    resourceGroupName: 'textfunctrigger'
+    resourceGroupName: 'funpython'
     slotName: 'production'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     runtimeStack: 'DOCKER|microsoft/azure-functions-dotnet-core2.0:2.0'
